@@ -1,23 +1,12 @@
 import { useEffect, useState } from "react";
-import { Search } from "./components/Search";
-import { Spinner } from "./components/Spinner";
-import MovieCard from "./components/MovieCard";
+import { Search } from "../components/Search";
+import { Spinner } from "../components/Spinner";
+import MovieCard from "../components/MovieCard";
 import { useDebounce } from "react-use";
-import { updateSearchCount, getTrendingMovies } from "./appwrite";
+import { updateSearchCount, getTrendingMovies } from "../appwrite";
+import { API_BASE_URL, API_OPTIONS } from "../api";
 
-const API_BASE_URL = "https://api.themoviedb.org/3";
-
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-
-const API_OPTIONS = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization: `Bearer ${API_KEY}`,
-  },
-};
-
-const App = () => {
+export const Home = () => {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -122,5 +111,3 @@ const App = () => {
     </main>
   );
 };
-
-export default App;
