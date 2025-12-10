@@ -2,7 +2,10 @@ import React from "react";
 
 export const Spinner = () => {
   return (
-    <div role="status">
+    <div
+      role="status"
+      className="flex items-center justify-center w-full h-screen"
+    >
       <svg
         aria-hidden="true"
         className="w-8 h-8 text-neutral-tertiary animate-spin fill-brand fill-indigo-600"
@@ -19,7 +22,7 @@ export const Spinner = () => {
           fill="currentFill"
         />
       </svg>
-      <span className="text-white">Loading...</span>
+      <span className="text-white">&nbsp;Loading...</span>
     </div>
   );
 };
