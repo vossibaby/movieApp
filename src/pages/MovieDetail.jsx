@@ -48,9 +48,9 @@ export const MovieDetail = () => {
   if (errorMessage) return <p className="text-red-500">{errorMessage}</p>;
 
   return (
-    <div className="bg-hero-pattern p-14 w-full h-screen bg-center bg-cover z-0 text-white flex justify-center relative">
+    <div className="flex-col xl:flex-row bg-hero-pattern p-14 xl:w-full xl:h-screen bg-center bg-cover z-0 text-white flex justify-center relative">
       <img
-        className="bg-dark-100 rounded-2xl shadow-inner shadow-light-100/10 "
+        className="sm: bg-dark-100 rounded-2xl shadow-inner shadow-light-100/10 "
         src={
           movie.poster_path
             ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
@@ -58,7 +58,7 @@ export const MovieDetail = () => {
         }
         alt={movie.title}
       />
-      <div className="max-w-xl ml-10 justify-items-start flex flex-col gap-y-2">
+      <div className="max-w-xl ml-10 justify-items-start flex flex-col gap-y-2 mt-3.5 xl:mt-0">
         <h1 className="flex justify-center">{movie?.title}</h1>
 
         <h3 className="flex">{movie?.overview}</h3>
@@ -74,7 +74,7 @@ export const MovieDetail = () => {
           <span className="text-amber-200">Release Date: &nbsp;</span>
           {movie?.release_date}
         </p>
-        <div className="absolute bottom-0 pb-14">
+        <div className="absolute bottom-0 xl:pb-14">
           <Button className="" onClick={() => navigate(-1)} />
         </div>
       </div>
