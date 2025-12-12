@@ -58,7 +58,7 @@ export const MovieDetail = () => {
         }
         alt={movie.title}
       />
-      <div className="max-w-xl ml-10 justify-items-start flex flex-col gap-y-2 mt-3.5 xl:mt-0">
+      <div className="max-w-xl xl:ml-10 justify-items-start flex flex-col gap-y-2 mt-3.5 xl:mt-0">
         <h1 className="flex justify-center">{movie?.title}</h1>
 
         <h3 className="flex">{movie?.overview}</h3>
